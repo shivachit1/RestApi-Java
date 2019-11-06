@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="31b0d120-cf99-45dc-9640-5abc1c5d3672" name="Default Changelist" comment="" />
+    <list default="true" id="31b0d120-cf99-45dc-9640-5abc1c5d3672" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vertx/restapi/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vertx/restapi/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vertx/restapi/EmployeeDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vertx/restapi/EmployeeDaoImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vertx/restapi/EmployeeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vertx/restapi/EmployeeEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vertx/restapi/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vertx/restapi/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vertx/restapi/EmployeeDaoImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vertx/restapi/EmployeeDaoImp.class" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +38,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1T7yV73pcj0R2lH3nFJKMyDhPod" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -60,7 +69,7 @@
       <module name="vertx-rest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.vertx.restapi.*" />
+          <option name="PATTERN" value="com.vertx.restapi.App" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -70,7 +79,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App" />
+        <item itemvalue="Application.VertexServer" />
       </list>
     </recent_temporary>
   </component>
@@ -86,5 +95,16 @@
       <updated>1572825448720</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

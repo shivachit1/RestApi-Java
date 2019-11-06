@@ -9,29 +9,33 @@ import io.vertx.ext.web.handler.BodyHandler;
 public class App
 {
     public static void main( String[] args ) {
+      Vertx vertx = Vertx.vertx();
 
-        Vertx vertx = Vertx.vertx();
+      // Creating Http Server using Vertx
       HttpServer httpsServer = vertx.createHttpServer();
       Router router = Router.router(vertx);
 
       EmployeeDao employeeDao=new EmployeeDaoImp();
 
-        //-- GET method
+        //-- GET method for getting List of Employees
+        // "Path"  /api/employees
       router.get("/api/employees").handler(BodyHandler.create())
               .handler(routingContext -> {
                  HttpServerResponse response = routingContext.response();
                  response.setChunked(true);
-                 response.putHeader("content-type","text/plain");
                  response.end("List of Employees : "+ employeeDao.getEmployees().toString());
               });
 
-        //-- POST method
+        //-- POST method for creating an Employee
+        // "path" /api/employees
         router.post("/api/employees").produces("application/json").handler(BodyHandler.create())
                 .handler(routingContext -> {
                     String id = routingContext.request().getParam("id");
                     String name = routingContext.request().getParam("name");
                     String position = routingContext.request().getParam("position");
                     String company = routingContext.request().getParam("company");
+
+                    // using Entity Builder For creating Object
                     final EmployeeEntity employee=EmployeeEntity.builder().setId(id).setName(name).setPosition(position).setCompany(company).build();
                     HttpServerResponse response = routingContext.response();
                     response.setChunked(true);
@@ -41,6 +45,8 @@ public class App
 
                 });
 
+       // Get Method for getting Employee by ID
+        // "path" /api/employees/:id
         router.get("/api/employees/:id").handler(BodyHandler.create())
                     .handler(routingContext -> {
                         String id = routingContext.request().getParam("id");
@@ -55,6 +61,8 @@ public class App
                 });
 
 
+        // Update employee using ID
+        // "Path"  /api/employees/:id
         router.put("/api/employees/:id").handler(BodyHandler.create())
                 .handler(routingContext -> {
                     String id = routingContext.request().getParam("id");
@@ -64,6 +72,8 @@ public class App
                                 String name = routingContext.request().getParam("name");
                                 String position = routingContext.request().getParam("position");
                                 String company = routingContext.request().getParam("company");
+
+                                // using Entity Builder For creating Object
                                 final EmployeeEntity employee=EmployeeEntity.builder().setId(id).setName(name).setPosition(position).setCompany(company).build();
                                 HttpServerResponse response = routingContext.response();
                                 response.setChunked(true);
@@ -79,6 +89,8 @@ public class App
                 });
 
 
+        // Delete a Employee Given ID
+        // "Path"  /api/employees/:id
         router.delete("/api/employees/:id").handler(BodyHandler.create())
                 .handler(routingContext -> {
                     String id = routingContext.request().getParam("id");
@@ -94,8 +106,7 @@ public class App
                     }
                 });
 
-      httpsServer
-              .requestHandler(router::accept)
-              .listen(8080);
+        // Running Vertx Server with Port 8080
+      httpsServer.requestHandler(router::accept).listen(8080);
     }
 }

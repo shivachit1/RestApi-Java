@@ -51,6 +51,8 @@ public class EmployeeEntity implements Serializable {
         return new EmployeeEntityBuilder();
     }
 
+
+    // Using Builder for creating Object for Employee Entity
     public static class EmployeeEntityBuilder {
 
         private  String id;
