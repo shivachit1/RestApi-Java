@@ -3,6 +3,8 @@
 Project Info
 - Simple RESTful APIs using Java
 - Vertx Server
+- Maven archetype
+
 
 Extras:
 - Using Entity Interface/Builder
