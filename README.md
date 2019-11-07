@@ -10,7 +10,7 @@
 
 #### Curl Testing on http://localhost:8080 using Terminal: (Example with Payload)
 
- ###### curl http://localhost:8080/api/employees
+	   curl http://localhost:8080/api/employees
 	     - get the list of Employees
 
 	   curl http://localhost:8080/api/employees/2
