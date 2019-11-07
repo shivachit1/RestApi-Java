@@ -1,6 +1,6 @@
 # Simple Rest APIs with Entity using Vertex server, Maven Archetype.
 
- #### HTTP Methods (Vertex Routing):
+ #### HTTP Methods (Vert.x Routing):
 	GET     -   '/api/employees'      (get the list of Employees)
 	GET     -   '/api/employees/:id'  (get the Employee with given id)
 	POST    -   '/api/employees'      (Create an Employee)
@@ -8,7 +8,7 @@
 	DELETE  -   '/api/employees/:id'  (Delete/remove employee containing given id)
 
 
-Curl Testing on http://localhost:8080 using Terminal: (Example with Payload)
+#### Curl Testing on http://localhost:8080 using Terminal: (Example with Payload)
 
    curl http://localhost:8080/api/employees
      - get the list of Employees
