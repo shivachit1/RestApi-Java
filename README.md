@@ -1,4 +1,4 @@
-# Simple Rest APIs with Entity using Vertex server, Maven Archetype.
+# Simple example to show how to build Rest API Service with Entity using Vertex server, Maven Archetype.
 
  #### HTTP Methods (Vert.x Routing):
 	GET     -   '/api/employees'      (get the list of Employees)
